@@ -1,0 +1,14 @@
+{
+  "name": "armqna",
+  "version": "1.0.0",
+  "description": "Armory QnA",
+  "main": "armqna.js",
+  "scripts": {
+  },
+  "dependencies": {
+    "@tensorflow-models/qna": "^1.0.1",
+    "@tensorflow/tfjs-node": "^4.1.0"
+  },
+  "author": "tong@disktree.net",
+  "license": "ISC"
+}
