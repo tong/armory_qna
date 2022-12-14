@@ -1,0 +1,22 @@
+name: qna-manual
+
+on:
+  workflow_dispatch:
+    inputs:
+      question:
+        description: "Question to get answers for"
+        required: true
+        type: string
+
+jobs:
+  qna:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+      - name: Setup
+        run: npm install
+      - name: QnA
+        run: |
+          node armqna.js --knowledge armory.wiki --question "{{ inputs.question }}"
